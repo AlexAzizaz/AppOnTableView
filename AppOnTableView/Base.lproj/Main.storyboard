@@ -67,6 +67,7 @@
                                     <outlet property="locationLable" destination="35Y-iI-cQR" id="EBN-f1-Mxt"/>
                                     <outlet property="nameLable" destination="vSh-bU-mU1" id="MTy-Br-iCM"/>
                                     <outlet property="typeLable" destination="dMs-0n-RpS" id="rCW-f4-bj9"/>
+                                    <segue destination="pmc-f4-k6D" kind="show" identifier="ShowDetail" id="RJ4-df-CwS"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,7 +76,7 @@
                             <outlet property="delegate" destination="JIL-S2-Qc2" id="Git-Vs-2kx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Places" id="nNj-aH-QYE">
+                    <navigationItem key="navigationItem" title="My Places" largeTitleDisplayMode="never" id="nNj-aH-QYE">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="rDo-He-c6m">
                             <connections>
                                 <segue destination="Lfu-1y-THI" kind="presentation" modalTransitionStyle="crossDissolve" id="prF-DI-bOz"/>
@@ -107,14 +108,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="lNv-qQ-ByK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                    <rect key="frame" x="0.0" y="2" width="375" height="248.00000000000006"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="lNv-qQ-ByK" secondAttribute="bottom" id="9yI-iR-2dv"/>
                                                 <constraint firstItem="lNv-qQ-ByK" firstAttribute="leading" secondItem="10p-uN-XFz" secondAttribute="leading" id="QtO-eD-xB0"/>
-                                                <constraint firstItem="lNv-qQ-ByK" firstAttribute="top" secondItem="10p-uN-XFz" secondAttribute="top" id="Ukc-6W-Nvl"/>
+                                                <constraint firstItem="lNv-qQ-ByK" firstAttribute="top" secondItem="10p-uN-XFz" secondAttribute="top" constant="2" id="Ukc-6W-Nvl"/>
                                                 <constraint firstAttribute="trailing" secondItem="lNv-qQ-ByK" secondAttribute="trailing" id="uT8-Uh-qp7"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -232,7 +233,7 @@
                             <outlet property="delegate" destination="pmc-f4-k6D" id="gFr-sc-Or7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="dTn-y5-j3Q">
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="dTn-y5-j3Q">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="e0f-NN-WWE">
                             <connections>
                                 <action selector="cancelAction:" destination="pmc-f4-k6D" id="Y60-vV-Af6"/>
@@ -255,14 +256,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwM-SL-qPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="i7E-B6-VVT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1805.5999999999999" y="92.203898050974516"/>
+            <point key="canvasLocation" x="1204" y="92.203898050974516"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYk-ZQ-vAa">
             <objects>
                 <navigationController id="RhI-tS-mlg" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XY5-To-TYU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XY5-To-TYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="24"/>
@@ -292,10 +293,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPw-l1-W8F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1133.5999999999999" y="92.203898050974516"/>
+            <point key="canvasLocation" x="1204" y="-610"/>
         </scene>
     </scenes>
     <resources>
         <image name="Photo" width="195" height="196"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ddb-IV-xL1"/>
+    </inferredMetricsTieBreakers>
 </document>
