@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RhI-tS-mlg">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="pmc-f4-k6D" customClass="NewPlaceViewController" customModule="AppOnTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yFa-I9-O3H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
@@ -144,6 +144,23 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="140" id="lbx-V3-0E2">
+                                        <rect key="frame" x="0.0" y="503" width="375" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lbx-V3-0E2" id="HB3-9B-IlR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="251.99999999999997" placeholderIntrinsicHeight="44" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="epD-cy-BQQ" customClass="RaitingControl" customModule="AppOnTableView" customModuleProvider="target">
+                                                    <rect key="frame" x="61.666666666666657" y="48" width="251.99999999999997" height="44"/>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="epD-cy-BQQ" firstAttribute="centerY" secondItem="HB3-9B-IlR" secondAttribute="centerY" id="BZD-pS-Lxs"/>
+                                                <constraint firstItem="epD-cy-BQQ" firstAttribute="centerX" secondItem="HB3-9B-IlR" secondAttribute="centerX" id="ciS-MO-3dr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -169,6 +186,7 @@
                         <outlet property="placeLocation" destination="wAe-U8-Duk" id="bsk-OK-6yn"/>
                         <outlet property="placeName" destination="vIW-yK-lHU" id="q4m-UR-9bE"/>
                         <outlet property="placeType" destination="N6L-EB-5p1" id="ePg-cc-YtI"/>
+                        <outlet property="ratingControl" destination="epD-cy-BQQ" id="UcX-Il-4sC"/>
                         <outlet property="saveButton" destination="MN6-Wa-5pe" id="AkB-gT-LHj"/>
                     </connections>
                 </tableViewController>
@@ -182,11 +200,11 @@
             <objects>
                 <viewController id="tcJ-tw-mZh" customClass="MainViewController" customModule="AppOnTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SbZ-sD-lNd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ioO-sS-CuO">
-                                <rect key="frame" x="0.0" y="83" width="375" height="584"/>
+                                <rect key="frame" x="0.0" y="127" width="375" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ak1-8L-zF9" customClass="CustomTableViewCell" customModule="AppOnTableView" customModuleProvider="target">
@@ -207,19 +225,19 @@
                                                     <rect key="frame" x="96" y="8" width="263" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkL-1R-Thc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="263" height="24.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="263" height="24.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="her-gQ-NGb">
-                                                            <rect key="frame" x="0.0" y="27.5" width="263" height="20"/>
+                                                            <rect key="frame" x="0.0" y="27.333333333333336" width="263" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-V2-4tL">
-                                                            <rect key="frame" x="0.0" y="50.5" width="263" height="18.5"/>
+                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="263" height="18.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -251,7 +269,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mjl-yl-K6a">
-                                <rect key="frame" x="0.0" y="44" width="375" height="32"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="32"/>
                                 <segments>
                                     <segment title="Date"/>
                                     <segment title="Name"/>
@@ -265,7 +283,7 @@
                         <constraints>
                             <constraint firstItem="mjl-yl-K6a" firstAttribute="trailing" secondItem="x3e-Rd-ks7" secondAttribute="trailing" id="9JT-gW-SpH"/>
                             <constraint firstItem="mjl-yl-K6a" firstAttribute="leading" secondItem="x3e-Rd-ks7" secondAttribute="leading" id="Ncw-xx-7wd"/>
-                            <constraint firstItem="ioO-sS-CuO" firstAttribute="bottom" secondItem="x3e-Rd-ks7" secondAttribute="bottom" id="RPY-5T-oAz"/>
+                            <constraint firstItem="ioO-sS-CuO" firstAttribute="bottom" secondItem="SbZ-sD-lNd" secondAttribute="bottom" id="RPY-5T-oAz"/>
                             <constraint firstItem="ioO-sS-CuO" firstAttribute="leading" secondItem="x3e-Rd-ks7" secondAttribute="leading" id="T2S-dS-SIO"/>
                             <constraint firstItem="ioO-sS-CuO" firstAttribute="top" secondItem="mjl-yl-K6a" secondAttribute="bottom" constant="8" id="VdL-Vq-N9l"/>
                             <constraint firstItem="mjl-yl-K6a" firstAttribute="top" secondItem="x3e-Rd-ks7" secondAttribute="top" id="nmZ-FW-Phd"/>
@@ -300,7 +318,7 @@
             <objects>
                 <navigationController id="RhI-tS-mlg" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XY5-To-TYU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="24"/>
@@ -320,7 +338,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Lfu-1y-THI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vic-Nk-zYL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -335,7 +353,7 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
-        <image name="Photo" width="195" height="196"/>
+        <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Gk-wA-bSj"/>

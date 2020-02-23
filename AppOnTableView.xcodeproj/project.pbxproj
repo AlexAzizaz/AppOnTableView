@@ -13,6 +13,7 @@
 		447BC64E23F1EFE400DA64DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447BC64C23F1EFE400DA64DB /* Main.storyboard */; };
 		447BC65023F1EFE400DA64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 447BC64F23F1EFE400DA64DB /* Assets.xcassets */; };
 		447BC65323F1EFE400DA64DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447BC65123F1EFE400DA64DB /* LaunchScreen.storyboard */; };
+		44A28EBD23FF275F0039A77F /* RaitingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A28EBC23FF275F0039A77F /* RaitingControl.swift */; };
 		44AE734323F5EC080027C375 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AE734223F5EC080027C375 /* NewPlaceViewController.swift */; };
 		44E2C84423F48E160010AA8F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E2C84323F48E160010AA8F /* CustomTableViewCell.swift */; };
 		44E2C84623F4977A0010AA8F /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E2C84523F4977A0010AA8F /* PlaceModel.swift */; };
@@ -29,6 +30,7 @@
 		447BC64F23F1EFE400DA64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		447BC65223F1EFE400DA64DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		447BC65423F1EFE400DA64DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44A28EBC23FF275F0039A77F /* RaitingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaitingControl.swift; sourceTree = "<group>"; };
 		44AE734223F5EC080027C375 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		44E2C84323F48E160010AA8F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		44E2C84523F4977A0010AA8F /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				44E2C84523F4977A0010AA8F /* PlaceModel.swift */,
 				44E71F4623F9E6210000D433 /* StorageManager.swift */,
 				44E2C84323F48E160010AA8F /* CustomTableViewCell.swift */,
+				44A28EBC23FF275F0039A77F /* RaitingControl.swift */,
 				44AE734223F5EC080027C375 /* NewPlaceViewController.swift */,
 				447BC64C23F1EFE400DA64DB /* Main.storyboard */,
 				447BC64F23F1EFE400DA64DB /* Assets.xcassets */,
@@ -224,6 +227,7 @@
 				44E71F4723F9E6210000D433 /* StorageManager.swift in Sources */,
 				44E2C84623F4977A0010AA8F /* PlaceModel.swift in Sources */,
 				44E2C84423F48E160010AA8F /* CustomTableViewCell.swift in Sources */,
+				44A28EBD23FF275F0039A77F /* RaitingControl.swift in Sources */,
 				447BC64923F1EFE400DA64DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
