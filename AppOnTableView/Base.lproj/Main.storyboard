@@ -193,7 +193,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwM-SL-qPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="i7E-B6-VVT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="92.203898050974516"/>
+            <point key="canvasLocation" x="1204" y="91.625615763546804"/>
         </scene>
         <!--My Places-->
         <scene sceneID="4ny-sd-K5S">
@@ -222,39 +222,53 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="feI-3w-QD7">
-                                                    <rect key="frame" x="96" y="8" width="263" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="173" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkL-1R-Thc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="263" height="24.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="173" height="24.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="her-gQ-NGb">
-                                                            <rect key="frame" x="0.0" y="27.333333333333336" width="263" height="20.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="27.333333333333336" width="173" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ul-V2-4tL">
-                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="263" height="18.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="50.666666666666664" width="173" height="18.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="KjE-8T-2fo" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="277" y="35.666666666666664" width="90" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="3e3-ci-DkC"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="feI-3w-QD7" secondAttribute="trailing" constant="16" id="5m8-tK-QQd"/>
                                                 <constraint firstItem="kt4-VA-Imd" firstAttribute="leading" secondItem="fq6-3S-MpA" secondAttribute="leading" constant="15" id="89k-MH-Xgd"/>
                                                 <constraint firstItem="feI-3w-QD7" firstAttribute="leading" secondItem="kt4-VA-Imd" secondAttribute="trailing" constant="16" id="NLm-R5-4CO"/>
+                                                <constraint firstItem="KjE-8T-2fo" firstAttribute="centerY" secondItem="fq6-3S-MpA" secondAttribute="centerY" id="X32-R6-g8r"/>
                                                 <constraint firstAttribute="bottom" secondItem="feI-3w-QD7" secondAttribute="bottom" constant="8" id="YuN-Jh-byO"/>
+                                                <constraint firstAttribute="trailing" secondItem="KjE-8T-2fo" secondAttribute="trailing" constant="8" id="bAw-cV-6hs"/>
                                                 <constraint firstItem="feI-3w-QD7" firstAttribute="top" secondItem="fq6-3S-MpA" secondAttribute="top" constant="8" id="cr7-Ol-iUC"/>
+                                                <constraint firstItem="KjE-8T-2fo" firstAttribute="leading" secondItem="feI-3w-QD7" secondAttribute="trailing" constant="8" id="jF0-EG-RDQ"/>
                                                 <constraint firstItem="kt4-VA-Imd" firstAttribute="centerY" secondItem="fq6-3S-MpA" secondAttribute="centerY" id="kvl-ts-B4y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="KjE-8T-2fo" id="avv-an-1yK"/>
                                             <outlet property="imageOfPlace" destination="kt4-VA-Imd" id="YeA-tV-e2Q"/>
                                             <outlet property="locationLable" destination="her-gQ-NGb" id="7if-Ul-z2D"/>
                                             <outlet property="nameLable" destination="XkL-1R-Thc" id="j8r-ig-GM4"/>
@@ -311,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsl-4l-gW8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325.60000000000002" y="91.304347826086968"/>
+            <point key="canvasLocation" x="325.60000000000002" y="90.886699507389167"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IYk-ZQ-vAa">
