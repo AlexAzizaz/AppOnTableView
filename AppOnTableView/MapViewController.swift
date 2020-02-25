@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     var place = Place()
     let annotationIdentifier = "annotationIdentifier"
     let locationManager = CLLocationManager()
+    let regionInMeters = 10_000.00
 
     @IBOutlet weak var mapView: MKMapView!
     
@@ -24,6 +25,21 @@ class MapViewController: UIViewController {
         setupPlaceMark()
         checkLocationServices()
 
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        checkLocationServices()
+//    }
+    
+    
+    @IBAction func centerViewInUserLocation() {
+        
+        if let location = locationManager.location?.coordinate {
+            let region = MKCoordinateRegion(center: location,
+                                            latitudinalMeters: regionInMeters,
+                                            longitudinalMeters: regionInMeters)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     @IBAction func closeVC() {
@@ -65,7 +81,9 @@ class MapViewController: UIViewController {
             setupLocationManager()
             checkLocationAutorization()
         } else {
-            // Show alert controller
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.showAlertController(title: "Error", message: "Location services are disabled on the device.")
+            }
         }
     }
     
@@ -80,18 +98,25 @@ class MapViewController: UIViewController {
             mapView.showsUserLocation = true
             break
         case .denied:
-            // Show alert controller
+            showAlertController(title: "Error", message: "The user denied the use of location services for the app or they are disabled globally in Settings.")
             break
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            // Show alert controller
+            showAlertController(title: "Error", message: "The app is not authorized to use location services.")
             break
         case .authorizedAlways:
             break
         @unknown default:
             print("New case is available")
         }
+    }
+    
+    private func showAlertController(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true)
     }
     
 
