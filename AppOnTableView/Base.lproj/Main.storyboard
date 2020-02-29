@@ -121,7 +121,7 @@
                                                     </constraints>
                                                     <state key="normal" image="Placeholder"/>
                                                     <connections>
-                                                        <segue destination="Xmf-BB-N2Y" kind="presentation" identifier="getAdress" id="lA7-qC-apy"/>
+                                                        <segue destination="Xmf-BB-N2Y" kind="presentation" identifier="getAddress" id="lA7-qC-apy"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -299,7 +299,7 @@
                         <viewLayoutGuide key="safeArea" id="upL-Oc-RT3"/>
                     </view>
                     <connections>
-                        <outlet property="adressLable" destination="i5Q-Zc-Ss0" id="RdZ-Px-3ui"/>
+                        <outlet property="addressLable" destination="i5Q-Zc-Ss0" id="RdZ-Px-3ui"/>
                         <outlet property="doneButton" destination="jzI-wl-68e" id="D2M-aE-30g"/>
                         <outlet property="mapPinImage" destination="RbX-ch-JFB" id="fCA-yp-oTV"/>
                         <outlet property="mapView" destination="dGG-hk-PDY" id="JjG-wP-XGe"/>
