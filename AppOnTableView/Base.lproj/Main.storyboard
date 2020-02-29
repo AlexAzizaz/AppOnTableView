@@ -277,6 +277,17 @@
                                     <action selector="centerViewInUserLocation" destination="Xmf-BB-N2Y" eventType="touchUpInside" id="bgo-uK-33u"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7s-ty-yzx">
+                                <rect key="frame" x="162.66666666666666" y="688" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6od-p0-5Uo"/>
+                                    <constraint firstAttribute="width" constant="50" id="yOY-dM-5a8"/>
+                                </constraints>
+                                <state key="normal" image="GetDirection"/>
+                                <connections>
+                                    <action selector="goButtonPressed" destination="Xmf-BB-N2Y" eventType="touchUpInside" id="v1a-G2-xae"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -295,12 +306,15 @@
                             <constraint firstItem="upL-Oc-RT3" firstAttribute="bottom" secondItem="jzI-wl-68e" secondAttribute="bottom" constant="40" id="fDf-KH-L05"/>
                             <constraint firstItem="dGG-hk-PDY" firstAttribute="top" secondItem="nxG-D7-1za" secondAttribute="top" id="mo7-VA-Puq"/>
                             <constraint firstItem="RbX-ch-JFB" firstAttribute="centerX" secondItem="nxG-D7-1za" secondAttribute="centerX" id="nSv-ia-KQq"/>
+                            <constraint firstItem="upL-Oc-RT3" firstAttribute="bottom" secondItem="n7s-ty-yzx" secondAttribute="bottom" constant="40" id="uLT-xk-pOg"/>
+                            <constraint firstItem="n7s-ty-yzx" firstAttribute="centerX" secondItem="nxG-D7-1za" secondAttribute="centerX" id="zhE-UD-O3I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="upL-Oc-RT3"/>
                     </view>
                     <connections>
                         <outlet property="addressLable" destination="i5Q-Zc-Ss0" id="RdZ-Px-3ui"/>
                         <outlet property="doneButton" destination="jzI-wl-68e" id="D2M-aE-30g"/>
+                        <outlet property="goButton" destination="n7s-ty-yzx" id="NTJ-F4-3cn"/>
                         <outlet property="mapPinImage" destination="RbX-ch-JFB" id="fCA-yp-oTV"/>
                         <outlet property="mapView" destination="dGG-hk-PDY" id="JjG-wP-XGe"/>
                     </connections>
@@ -482,6 +496,7 @@
     </scenes>
     <resources>
         <image name="AZ" width="25" height="24"/>
+        <image name="GetDirection" width="50" height="50"/>
         <image name="Photo" width="194.66667175292969" height="195.66667175292969"/>
         <image name="Pin" width="40" height="40"/>
         <image name="Placeholder" width="20" height="20"/>
