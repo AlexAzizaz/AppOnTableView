@@ -288,13 +288,21 @@
                                     <action selector="goButtonPressed" destination="Xmf-BB-N2Y" eventType="touchUpInside" id="v1a-G2-xae"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIstance And Time" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MT3-xY-RH2">
+                                <rect key="frame" x="16" y="194" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="dGG-hk-PDY" secondAttribute="bottom" id="0Y5-ih-f6B"/>
+                            <constraint firstItem="dGG-hk-PDY" firstAttribute="top" secondItem="MT3-xY-RH2" secondAttribute="bottom" constant="-230" id="1B8-rS-Lr0"/>
                             <constraint firstItem="RbX-ch-JFB" firstAttribute="centerY" secondItem="nxG-D7-1za" secondAttribute="centerY" constant="-20" id="40b-QH-h0Q"/>
                             <constraint firstItem="upL-Oc-RT3" firstAttribute="trailing" secondItem="i5Q-Zc-Ss0" secondAttribute="trailing" constant="16" id="7EF-ul-Ry8"/>
                             <constraint firstItem="upL-Oc-RT3" firstAttribute="bottom" secondItem="1bH-EL-2Nf" secondAttribute="bottom" constant="143" id="9Ze-rj-Thc"/>
+                            <constraint firstItem="MT3-xY-RH2" firstAttribute="leading" secondItem="upL-Oc-RT3" secondAttribute="leading" constant="16" id="BAl-dP-GoV"/>
                             <constraint firstItem="2fk-IU-NuD" firstAttribute="top" secondItem="upL-Oc-RT3" secondAttribute="top" constant="40" id="F1T-Ei-t0T"/>
                             <constraint firstItem="i5Q-Zc-Ss0" firstAttribute="leading" secondItem="upL-Oc-RT3" secondAttribute="leading" constant="16" id="NUo-FU-ISE"/>
                             <constraint firstItem="upL-Oc-RT3" firstAttribute="trailing" secondItem="1bH-EL-2Nf" secondAttribute="trailing" constant="40" id="QAD-nw-6Na"/>
@@ -306,6 +314,7 @@
                             <constraint firstItem="upL-Oc-RT3" firstAttribute="bottom" secondItem="jzI-wl-68e" secondAttribute="bottom" constant="40" id="fDf-KH-L05"/>
                             <constraint firstItem="dGG-hk-PDY" firstAttribute="top" secondItem="nxG-D7-1za" secondAttribute="top" id="mo7-VA-Puq"/>
                             <constraint firstItem="RbX-ch-JFB" firstAttribute="centerX" secondItem="nxG-D7-1za" secondAttribute="centerX" id="nSv-ia-KQq"/>
+                            <constraint firstItem="upL-Oc-RT3" firstAttribute="trailing" secondItem="MT3-xY-RH2" secondAttribute="trailing" constant="16" id="toA-gJ-WaX"/>
                             <constraint firstItem="upL-Oc-RT3" firstAttribute="bottom" secondItem="n7s-ty-yzx" secondAttribute="bottom" constant="40" id="uLT-xk-pOg"/>
                             <constraint firstItem="n7s-ty-yzx" firstAttribute="centerX" secondItem="nxG-D7-1za" secondAttribute="centerX" id="zhE-UD-O3I"/>
                         </constraints>
@@ -313,6 +322,7 @@
                     </view>
                     <connections>
                         <outlet property="addressLable" destination="i5Q-Zc-Ss0" id="RdZ-Px-3ui"/>
+                        <outlet property="distanceTimeLable" destination="MT3-xY-RH2" id="d58-PV-Npl"/>
                         <outlet property="doneButton" destination="jzI-wl-68e" id="D2M-aE-30g"/>
                         <outlet property="goButton" destination="n7s-ty-yzx" id="NTJ-F4-3cn"/>
                         <outlet property="mapPinImage" destination="RbX-ch-JFB" id="fCA-yp-oTV"/>
