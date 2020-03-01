@@ -292,11 +292,11 @@ extension MapViewController: MKMapViewDelegate {
         let center = getCenterLocation(for: mapView)
         let geocoder = CLGeocoder()
         
-        if incomeSegueIdentifire == "showMap" && previousLocation !=  nil {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                self.showUserLocation()
-            }
-        }
+//        if incomeSegueIdentifire == "showMap" && previousLocation !=  nil {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                self.showUserLocation()
+//            }
+//        }
         
         geocoder.cancelGeocode()
         
