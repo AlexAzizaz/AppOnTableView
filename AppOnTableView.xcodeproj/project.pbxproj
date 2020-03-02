@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		44467AB923F201F30084C4B8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44467AB823F201F30084C4B8 /* MainViewController.swift */; };
+		447A1331240C53CF004E6D47 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447A1330240C53CF004E6D47 /* MapManager.swift */; };
 		447BC64723F1EFE400DA64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BC64623F1EFE400DA64DB /* AppDelegate.swift */; };
 		447BC64923F1EFE400DA64DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447BC64823F1EFE400DA64DB /* SceneDelegate.swift */; };
 		447BC64E23F1EFE400DA64DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 447BC64C23F1EFE400DA64DB /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		44467AB823F201F30084C4B8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		447A1330240C53CF004E6D47 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		447BC64323F1EFE400DA64DB /* AppOnTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppOnTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		447BC64623F1EFE400DA64DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		447BC64823F1EFE400DA64DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +56,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447A1332240C67B2004E6D47 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44467AB823F201F30084C4B8 /* MainViewController.swift */,
+				44AE734223F5EC080027C375 /* NewPlaceViewController.swift */,
+				44DD3E0124030E090025E9EB /* MapViewController.swift */,
+				44E2C84323F48E160010AA8F /* CustomTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		447A1333240C67F3004E6D47 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				44E2C84523F4977A0010AA8F /* PlaceModel.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		447A1334240C6807004E6D47 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				447A1330240C53CF004E6D47 /* MapManager.swift */,
+				44E71F4623F9E6210000D433 /* StorageManager.swift */,
+				44A28EBC23FF275F0039A77F /* RaitingControl.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		447A1335240C682B004E6D47 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				447BC64623F1EFE400DA64DB /* AppDelegate.swift */,
+				447BC64823F1EFE400DA64DB /* SceneDelegate.swift */,
+				447BC64F23F1EFE400DA64DB /* Assets.xcassets */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		447A1336240C6857004E6D47 /* iBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				447BC64C23F1EFE400DA64DB /* Main.storyboard */,
+				447BC65123F1EFE400DA64DB /* LaunchScreen.storyboard */,
+			);
+			path = iBuilder;
+			sourceTree = "<group>";
+		};
 		447BC63A23F1EFE400DA64DB = {
 			isa = PBXGroup;
 			children = (
@@ -75,18 +125,11 @@
 		447BC64523F1EFE400DA64DB /* AppOnTableView */ = {
 			isa = PBXGroup;
 			children = (
-				447BC64623F1EFE400DA64DB /* AppDelegate.swift */,
-				447BC64823F1EFE400DA64DB /* SceneDelegate.swift */,
-				44467AB823F201F30084C4B8 /* MainViewController.swift */,
-				44E2C84523F4977A0010AA8F /* PlaceModel.swift */,
-				44E71F4623F9E6210000D433 /* StorageManager.swift */,
-				44E2C84323F48E160010AA8F /* CustomTableViewCell.swift */,
-				44A28EBC23FF275F0039A77F /* RaitingControl.swift */,
-				44AE734223F5EC080027C375 /* NewPlaceViewController.swift */,
-				44DD3E0124030E090025E9EB /* MapViewController.swift */,
-				447BC64C23F1EFE400DA64DB /* Main.storyboard */,
-				447BC64F23F1EFE400DA64DB /* Assets.xcassets */,
-				447BC65123F1EFE400DA64DB /* LaunchScreen.storyboard */,
+				447A1332240C67B2004E6D47 /* ViewControllers */,
+				447A1334240C6807004E6D47 /* Helpers */,
+				447A1335240C682B004E6D47 /* Support Files */,
+				447A1333240C67F3004E6D47 /* Modals */,
+				447A1336240C6857004E6D47 /* iBuilder */,
 				447BC65423F1EFE400DA64DB /* Info.plist */,
 			);
 			path = AppOnTableView;
@@ -230,6 +273,7 @@
 				44E71F4723F9E6210000D433 /* StorageManager.swift in Sources */,
 				44DD3E0224030E090025E9EB /* MapViewController.swift in Sources */,
 				44E2C84623F4977A0010AA8F /* PlaceModel.swift in Sources */,
+				447A1331240C53CF004E6D47 /* MapManager.swift in Sources */,
 				44E2C84423F48E160010AA8F /* CustomTableViewCell.swift in Sources */,
 				44A28EBD23FF275F0039A77F /* RaitingControl.swift in Sources */,
 				447BC64923F1EFE400DA64DB /* SceneDelegate.swift in Sources */,

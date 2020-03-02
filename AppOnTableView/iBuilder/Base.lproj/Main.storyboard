@@ -224,7 +224,7 @@
         <!--Map View Controller-->
         <scene sceneID="wtf-Nz-pQR">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Xmf-BB-N2Y" customClass="MapViewController" customModule="AppOnTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapVC" modalPresentationStyle="fullScreen" id="Xmf-BB-N2Y" customClass="MapViewController" customModule="AppOnTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nxG-D7-1za">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -515,7 +515,7 @@
         <image name="navigation-2" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lA7-qC-apy"/>
+        <segue reference="TgR-bJ-sOt"/>
         <segue reference="9Gk-wA-bSj"/>
     </inferredMetricsTieBreakers>
 </document>
