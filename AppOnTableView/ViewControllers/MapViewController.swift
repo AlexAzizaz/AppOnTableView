@@ -17,7 +17,7 @@ protocol MapViewControllerDelegate {
 
 class MapViewController: UIViewController {
     
-    let mapManager = MapManager()
+    lazy var mapManager = MapManager(mapVC: self)
     var mapViewControllerDelegate: MapViewControllerDelegate?
     var place = Place()
     
@@ -46,6 +46,8 @@ class MapViewController: UIViewController {
     @IBOutlet weak var distanceTimeLable: UILabel!
     
     override func viewDidLoad() {
+//        mapManager.mapVC = self
+        mapManager = MapManager(mapVC: self)
         super.viewDidLoad()
         distanceTimeLable.text = ""
         addressLable.text = ""

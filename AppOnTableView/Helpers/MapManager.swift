@@ -16,7 +16,11 @@ class MapManager {
     var placeCoordinate: CLLocationCoordinate2D?
     var directionsArray: [MKDirections] = []
     let regionInMeters = 1000.00
-    let mapVC = MapViewController()
+    weak var mapVC: MapViewController?
+    
+    init(mapVC: MapViewController) {
+        self.mapVC = mapVC
+    }
     
     // Маркер Заведения
     func setupPlaceMark (place: Place, mapView: MKMapView) {
@@ -132,7 +136,7 @@ class MapManager {
                 let distance = String(format: "%.1f",  minRoute.distance / 1000 )
                 let timeInterval = String(format: "%.f", minRoute.expectedTravelTime / 60 )
 
-                self.mapVC.distanceTimeLable.text = "Расстояние \(distance) км, Время в пути \(timeInterval) мин"
+                self.mapVC?.distanceTimeLable.text = "Расстояние \(distance) км, Время в пути \(timeInterval) мин"
             }
                         
             for route in response.routes {
